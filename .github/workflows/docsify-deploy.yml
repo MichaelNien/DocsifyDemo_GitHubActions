@@ -6,9 +6,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-#   strategy:
-#       matrix:
-#            node-version: [12.x]
+   strategy:
+       matrix:
+            node-version: [12.x]
     steps:
     - name: Checkout
       uses: actions/checkout@v3.1.0
@@ -20,7 +20,7 @@ jobs:
          branches: gh-pages
          soft_fail: true
 
-    - name: Deploy
-      uses: tool3/docsify-action@v1.1
+    - name: docsify-action
+      uses: tool3/docsify-action@v1.0.3
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
