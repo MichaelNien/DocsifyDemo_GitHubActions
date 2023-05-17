@@ -21,6 +21,6 @@ jobs:
          soft_fail: true
 
     - name: Deploy
-      uses: tool3/docsify-action@master
+      uses: tool3/docsify-action@v1.1
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
